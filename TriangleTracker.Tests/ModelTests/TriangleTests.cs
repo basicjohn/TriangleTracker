@@ -1,12 +1,16 @@
-﻿using System;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using TriangleTracker.Models;
 
-namespace triangleTracker
+namespace TriangleTracker.Tests
 {
-  class Program
+  [TestClass]
+  public class TriangleTests
   {
-    static void Main(string[] args)
+    [TestMethod]
+    public void CheckType_IsASide_String()
     {
-      Console.WriteLine("Hello World!");
+      Triangle testTriangle = new Triangle();
+      Assert.AreEqual("What the hell this is a triangle", testTriangle.CheckType(-1, 3, 4));
     }
   }
 }
